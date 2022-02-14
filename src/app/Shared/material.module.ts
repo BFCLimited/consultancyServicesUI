@@ -100,6 +100,7 @@ export const MY_FORMATS = {
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
+    
   ],
   providers: [
     { provide: MatDialogRef, useValue: {} },
