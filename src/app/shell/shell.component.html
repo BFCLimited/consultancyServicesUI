@@ -1,16 +1,16 @@
 <div>
-    <app-header-nav></app-header-nav>
-    <mat-sidenav-container class="sidenav-container">
-      <mat-sidenav>
-        <app-side-nav ></app-side-nav>
-      </mat-sidenav>
-      <mat-sidenav-content>
-        <div class="main_content">
-          
-  
-        </div>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </div>
-  
-  
+  <app-header-nav [sidenav]="leftSidenav"></app-header-nav>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #leftSidenav [mode]="'over'">
+      
+      <!-- follow header nav [sidenav]="leftSidenav" logic -->
+      <app-side-nav  [sidenav]="leftSidenav" ></app-side-nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="main_content">
+
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+

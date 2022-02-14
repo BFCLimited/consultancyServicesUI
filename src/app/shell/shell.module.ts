@@ -18,6 +18,6 @@ import { MaterialModule } from '../Shared/material.module';
     CommonModule,
     MaterialModule
     
-  ]
+  ],
 })
 export class ShellModule { }
