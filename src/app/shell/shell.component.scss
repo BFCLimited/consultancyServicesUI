@@ -1,14 +1,19 @@
 .main_content {
     width: 100%;
-    height: calc(104.2vh - 79px);
+    // height: calc(104.2vh - 79px);
+    height: calc(104.2vh - 31px);
     // background-color: var(--content-body-bg-color);
     background-color: white;
     overflow-x: hidden !important;
   }
   
   mat-sidenav {
-    background: rgb(0, 114, 197);
+    background: rgb(43, 33, 53);
     color: white;
+  }
+
+.underneathHeader{
+padding-top: 3rem;
   }
   
 //   :host ::ng-deep {

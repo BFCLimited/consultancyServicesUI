@@ -4,6 +4,7 @@ import { ShellComponent } from './shell.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { MaterialModule } from '../Shared/material.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,6 +17,7 @@ import { MaterialModule } from '../Shared/material.module';
   exports:[ShellComponent],
   imports: [
     CommonModule,
+    RouterModule,
     MaterialModule
     
   ],
