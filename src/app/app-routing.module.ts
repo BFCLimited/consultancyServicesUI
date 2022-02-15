@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShellComponent } from './shell/shell.component';
 
 const routes: Routes = [
-  {path: "", redirectTo:"home", pathMatch:"full"},
+  // {path: "", redirectTo:""},
 
   {
-    path: 'home',
+    path: '',
     component : ShellComponent,
     children :[
       {
