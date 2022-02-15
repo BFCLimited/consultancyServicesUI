@@ -1,28 +1,96 @@
-<h1>Man Power</h1>
-<h1>Ac Repair</h1>
-<h1>Painting works</h1>
-<h1>Non-Veg Delivery</h1>
-<h1>Wood Works</h1>
+<!-- 
+<div>
+    <div>
+        <div>
+            <mat-nav-list>
+                <ng-container *ngFor="let parent of newSideNav">
+                    <a mat-list-item *ngIf="parent.display && parent.routeName"
+                        [routerLink]="[parent.parentRouteName, parent.routeName]" [routerLinkActive]="'active'"
+                        (click)="displayChildMenu(parent.name, parent.routeName)">
+
+                    </a>
+
+                    <a mat-list-item *ngIf="parent.display && !parent.routeName"
+                        (click)="displayChildMenu(parent.name, parent.routeName)">
+                        <mat-icon style="padding-right: 5px;"> {{parent?.icon}} </mat-icon>
+                        <span class="name-styles w-100"
+                            [@animateText]="(linkText || mobileQuery.matches) ? 'show' : 'hide'">{{ parent?.name }}
+                            <mat-icon class="pe-1 align-middle float-end" *ngIf="parent.child.length">
+                                {{ selectedMainMenu === parent.name ? 'arrow_drop_down' :
+                                'arrow_right'}}
+                            </mat-icon>
+                        </span>
+                    </a>
+
+
+                    <ng-container *ngIf="selectedMainMenu === parent.name">
+                        <ng-container *ngFor="let child of parent.child">
+                          <a
+                            mat-list-item
+                            *ngIf="child.display"
+                            (click)="showMenu(child.name, true)"
+                            [routerLink]="[child.parentRouteName, child.routeName]"
+                            [routerLinkActive]="'active'"
+                            class="ps-3 "
+                          >
+                            <span
+                              class="child-name-styles "
+                              >{{ child?.name }}</span
+                            >
+                          </a>
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+            </mat-nav-list>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
 
 
 
 <div>
     <div>
         <div>
-            <!-- <mat-nav-list>
+            <mat-nav-list>
                 <ng-container *ngFor="let parent of newSideNav">
-                    <a 
-                    mat-list-item 
-                    *ngIf="parent.display && parent.routeName"
-                    [routerLink]="[parent.parentRouteName, parent.routeName]"
-                    [routerLinkActive]="'active'"
-                    (click)="displayChildMenu(parent.name, parent.routeName)"
-                    >
+                    <a mat-list-item *ngIf="parent.display && parent.routeName" [routerLink]="[parent.routeName]"
+                        [routerLinkActive]="'active'">
+                        <mat-icon style="padding-right: 5px;"> {{parent?.icon}} </mat-icon>
+                        <span class="name-styles w-100"
+                            >{{ parent?.name }}
+                            <mat-icon class="pe-1 align-middle float-end" *ngIf="parent.child.length">
+                                arrow_right
+                            </mat-icon>
+                        </span>
 
                     </a>
 
+                    <a mat-list-item *ngIf="parent.display && !parent.routeName">
+                        <mat-icon style="padding-right: 5px;"> {{parent?.icon}} </mat-icon>
+                        <span class="name-styles w-100">{{ parent?.name }}
+                            <mat-icon class="pe-1 align-middle float-end" *ngIf="parent.child.length">
+                                arrow_right
+                            </mat-icon>
+                        </span>
+                    </a>
+
+
+                    <ng-container *ngIf="parent.name">
+                        <ng-container *ngFor="let child of parent.child">
+                            <a mat-list-item *ngIf="child.display" [routerLink]="[child.routeName]"
+                                [routerLinkActive]="'active'" class="ps-3 ">
+                                <mat-icon style="padding-right: 5px;">{{child?.icon}}</mat-icon>
+                                <span class="child-name-styles ">{{ child?.name }}</span>
+                            </a>
+                        </ng-container>
+                    </ng-container>
                 </ng-container>
-            </mat-nav-list> -->
+            </mat-nav-list>
         </div>
     </div>
 </div>
