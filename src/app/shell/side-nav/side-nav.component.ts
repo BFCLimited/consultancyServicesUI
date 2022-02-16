@@ -16,8 +16,9 @@ export class SideNavComponent implements OnInit {
       name: 'Professional',
       display: true,
       parentRouteName: 'home',
-      routeName: 'ApplianceRepair',
+      routeName: 'homexxx',
       icon: 'work',
+      iconColor: 'text-primary',
       child: [],
     },
 
@@ -28,6 +29,7 @@ export class SideNavComponent implements OnInit {
       parentRouteName: 'home',
       routeName: 'ApplianceRepair',
       icon: 'feedback',
+      iconColor: 'text-warning',
       child: [],
     },
 
@@ -38,6 +40,7 @@ export class SideNavComponent implements OnInit {
       parentRouteName: 'not-using',
       routeName: null,
       icon: 'app_registration',
+      iconColor: 'text-info',
       child: [
         {
           id: 'ApplianceRepair',
@@ -45,6 +48,7 @@ export class SideNavComponent implements OnInit {
           display: true,
           parentRouteName: 'home',
           routeName: 'ApplianceRepair',
+          iconColor: 'text-danger',
           icon: 'local_laundry_service',
         },
 
@@ -54,6 +58,7 @@ export class SideNavComponent implements OnInit {
           display: true,
           parentRouteName: 'home',
           routeName: 'ApplianceRepair',
+          iconColor: 'text-secondary',
           icon: 'location_city',
         },
 
@@ -63,6 +68,7 @@ export class SideNavComponent implements OnInit {
           display: true,
           parentRouteName: 'home',
           routeName: 'ApplianceRepair',
+          iconColor: 'text-primary',
           icon: 'whatshot',
         },
 
@@ -72,6 +78,7 @@ export class SideNavComponent implements OnInit {
           display: true,
           parentRouteName: 'home',
           routeName: 'ApplianceRepair',
+          iconColor: 'text-info',
           icon: 'bug_report',
         },
 
@@ -81,6 +88,7 @@ export class SideNavComponent implements OnInit {
           display: true,
           parentRouteName: 'home',
           routeName: 'ApplianceRepair',
+          iconColor: 'text-warning',
           icon: 'local_shipping',
         },
         {
@@ -89,6 +97,7 @@ export class SideNavComponent implements OnInit {
           display: true,
           parentRouteName: 'home',
           routeName: 'ApplianceRepair',
+          iconColor: 'text-danger',
           icon: 'warning',
         },
         {
@@ -97,6 +106,7 @@ export class SideNavComponent implements OnInit {
           display: true,
           parentRouteName: 'home',
           routeName: 'ApplianceRepair',
+          iconColor: 'text-success',
           icon: 'local_florist',
         },
         {
@@ -105,14 +115,16 @@ export class SideNavComponent implements OnInit {
           display: true,
           parentRouteName: 'home',
           routeName: 'ApplianceRepair',
+          iconColor: 'text-info',
           icon: 'settings_ethernet',
         },
         {
           id: 'gadgets_Service',
-          name: 'gadgets Service',
+          name: 'Gadgets Service',
           display: true,
           parentRouteName: 'home',
           routeName: 'ApplianceRepair',
+          iconColor: 'text-danger',
           icon: 'phonelink',
         },
       ],
@@ -121,6 +133,10 @@ export class SideNavComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+  }
+
+  closesideNav() {
+    this.sidenav.close();
   }
 
 }

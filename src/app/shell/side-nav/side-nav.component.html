@@ -55,14 +55,14 @@
 
 <div>
     <div>
-        <div>
-            <mat-nav-list>
-                <ng-container *ngFor="let parent of newSideNav">
+        <div >
+            <mat-nav-list >
+                <ng-container *ngFor="let parent of newSideNav" >
                     <a mat-list-item *ngIf="parent.display && parent.routeName" [routerLink]="[parent.routeName]"
-                        [routerLinkActive]="'active'">
-                        <mat-icon style="padding-right: 5px;"> {{parent?.icon}} </mat-icon>
-                        <span class="name-styles w-100"
-                            >{{ parent?.name }}
+                        [routerLinkActive]="'active'"  (click)="sidenav.close()">
+                        <mat-icon style="padding-right: 5px; " class="{{parent.iconColor}}"> {{parent?.icon}} </mat-icon>
+                        <span class="name-styles w-100 text-white"
+                            > &nbsp; {{ parent?.name }}
                             <mat-icon class="pe-1 align-middle float-end" *ngIf="parent.child.length">
                                 arrow_right
                             </mat-icon>
@@ -71,9 +71,9 @@
                     </a>
 
                     <a mat-list-item *ngIf="parent.display && !parent.routeName">
-                        <mat-icon style="padding-right: 5px;"> {{parent?.icon}} </mat-icon>
-                        <span class="name-styles w-100">{{ parent?.name }}
-                            <mat-icon class="pe-1 align-middle float-end" *ngIf="parent.child.length">
+                        <mat-icon style="padding-right: 5px;" class="{{parent.iconColor}}"> {{parent?.icon}} </mat-icon>
+                        <span class="name-styles w-100 text-white"> &nbsp; {{ parent?.name }}
+                            <mat-icon class="pe-1 align-middle float-end " *ngIf="parent.child.length">
                                 arrow_right
                             </mat-icon>
                         </span>
@@ -83,9 +83,9 @@
                     <ng-container *ngIf="parent.name">
                         <ng-container *ngFor="let child of parent.child">
                             <a mat-list-item *ngIf="child.display" [routerLink]="[child.routeName]"
-                                [routerLinkActive]="'active'" class="ps-3 ">
-                                <mat-icon style="padding-right: 5px;">{{child?.icon}}</mat-icon>
-                                <span class="child-name-styles ">{{ child?.name }}</span>
+                                [routerLinkActive]="'active'" class="ps-3 " (click)="sidenav.close()">
+                                <mat-icon style="padding-right: 5px;" class="{{child.iconColor}}">{{child?.icon}}</mat-icon>
+                                <span class="child-name-styles text-white">&nbsp;{{ child?.name }}</span>
                             </a>
                         </ng-container>
                     </ng-container>
