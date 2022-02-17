@@ -10,10 +10,16 @@ const routes: Routes = [
     component : ShellComponent,
     children :[
       {
+        path:'ProfessionalUse',
+        loadChildren : () =>
+          import('./@Modules/professionals-cat/professionals-cat.module').then((m) => m.ProfessionalsCatModule),
+      },
+      {
         path:'ApplianceRepair',
         loadChildren : () =>
           import('./@Modules/appliances-cat/appliances-cat.module').then((m) => m.AppliancesCatModule),
       },
+      
     ]
   },
   { path: "**", redirectTo: "", component: ShellComponent },

@@ -16,7 +16,7 @@ export class SideNavComponent implements OnInit {
       name: 'Professional',
       display: true,
       parentRouteName: 'home',
-      routeName: 'homexxx',
+      routeName: 'ProfessionalUse',
       icon: 'work',
       iconColor: 'text-primary',
       child: [],
