@@ -27,7 +27,7 @@ export class SideNavComponent implements OnInit {
       name: 'Feed Back / Complaints',
       display: true,
       parentRouteName: 'home',
-      routeName: 'ApplianceRepair',
+      routeName: 'FeedBackComponent',
       icon: 'feedback',
       iconColor: 'text-warning',
       child: [],

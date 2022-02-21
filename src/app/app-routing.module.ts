@@ -15,9 +15,9 @@ const routes: Routes = [
           import('./@Modules/professionals-cat/professionals-cat.module').then((m) => m.ProfessionalsCatModule),
       },
       {
-        path:'ApplianceRepair',
+        path:'FeedBackComponent',
         loadChildren : () =>
-          import('./@Modules/appliances-cat/appliances-cat.module').then((m) => m.AppliancesCatModule),
+          import('./@Modules/feed-back-complaint/feed-back-complaint.module').then((m) => m.FeedBackComplaintModule),
       },
       
     ]
