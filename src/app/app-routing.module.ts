@@ -19,6 +19,11 @@ const routes: Routes = [
         loadChildren : () =>
           import('./@Modules/feed-back-complaint/feed-back-complaint.module').then((m) => m.FeedBackComplaintModule),
       },
+      {
+        path:'ApplianceRepair',
+        loadChildren : () =>
+          import('./@Modules/appliances-cat/appliances-cat.module').then((m) => m.AppliancesCatModule),
+      },
       
     ]
   },

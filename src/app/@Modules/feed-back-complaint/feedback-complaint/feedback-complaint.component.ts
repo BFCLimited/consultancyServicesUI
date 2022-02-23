@@ -12,4 +12,10 @@ export class FeedbackComplaintComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  foods: any = [
+    {value: '1', viewValue: 'Professional Related'},
+    {value: '2', viewValue: 'Application Related'},
+    {value: '3', viewValue: 'Other'},
+  ];
+
 }
