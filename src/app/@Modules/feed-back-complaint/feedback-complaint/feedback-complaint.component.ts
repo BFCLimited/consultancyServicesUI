@@ -31,6 +31,49 @@ export class FeedbackComplaintComponent implements OnInit {
     {value: '3', viewValue: 'Suggestion'},
   ];
 
+  Reviews: any =[
+    {
+      image: 'assets/images/blank-profile-picture.png',
+      name: 'AAron Finch',
+      UserType: 'Service Provider',
+      VerifiedUser : true,
+      Comment: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+
+    },
+    {
+      image: 'assets/images/blank-profile-picture.png',
+      name: 'Maxwell G',
+      UserType: 'Client',
+      VerifiedUser : false,
+      Comment: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+
+    },
+    {
+      image: 'assets/images/blank-profile-picture.png',
+      name: 'R Pant',
+      UserType: 'Service Provider',
+      VerifiedUser : true,
+      Comment: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+
+    },
+    {
+      image: 'assets/images/blank-profile-picture.png',
+      name: 'Shami M',
+      UserType: 'Service Provider',
+      VerifiedUser : false,
+      Comment: " Lorem ipsum dolor sit.",
+
+    },
+    {
+      image: 'assets/images/blank-profile-picture.png',
+      name: 'Dhoni',
+      UserType: 'Client',
+      VerifiedUser : false,
+      Comment: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+
+    },
+  ];
+
   selectedone : any;
   selectedIssue : any;
   
