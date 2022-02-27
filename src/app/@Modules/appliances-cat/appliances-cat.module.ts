@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AppliancesCatRoutingModule } from './appliances-cat-routing.module';
 import { AppliancesCatComponent } from './appliances-cat/appliances-cat.component';
+import { MaterialModule } from 'src/app/Shared/material.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AppliancesCatComponent } from './appliances-cat/appliances-cat.componen
   ],
   imports: [
     CommonModule,
-    AppliancesCatRoutingModule
+    AppliancesCatRoutingModule,
+    MaterialModule
   ]
 })
 export class AppliancesCatModule { }

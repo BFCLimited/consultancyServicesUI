@@ -1,10 +1,58 @@
-<p>appliances-cat works!</p>
-<p>appliances-cat works!</p>
+<div>
+    <div class="mt-2">
 
-<p>appliances-cat works!</p>
+        <!-- header content  -->
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+                <h1 class="m-0"><b>on Appliances...</b></h1>
+            </div>
+            <hr />
+        </div>
 
-<p>appliances-cat works!</p>
+        <div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-<p>appliances-cat works!</p>
+                    <div class="text-center">
 
-<p>appliances-cat works!</p>
+                        <span class="d-none d-md-block">
+                            <mat-form-field appearance="outline" class="w-25">
+                                <mat-icon matPrefix class="add-top-space">location_on</mat-icon>
+                                <input matInput placeholder="Search by Location" appearance="outline">
+                            </mat-form-field>
+
+                        </span>
+                        <span class="d-block d-md-none ms-2">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-icon matPrefix class="add-top-space">location_on</mat-icon>
+                                <input matInput placeholder="Search by Location" appearance="outline">
+                            </mat-form-field>
+                        </span>
+
+                    </div>
+
+                    <!-- <div class="">
+                        <img class src="assets/images/view-all-services.jpg"/>
+                    </div> -->
+
+                    <!-- <div class="imgfit" [style.background-image]="'url(/assets/images/view-all-services.jpg)'"
+ 	                         [style.height.px]="150"></div> -->
+                </div>
+            </div>
+
+
+            <div class="container">
+
+                <div class="row">
+                    <span *ngFor="let btn of applianceServicesList" class="m-1 p-0 appliancesServicesButtons">
+                        <button type="button"
+                            class="btn btn-outline-secondary shadow">{{btn.ServiceName}}</button>
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
