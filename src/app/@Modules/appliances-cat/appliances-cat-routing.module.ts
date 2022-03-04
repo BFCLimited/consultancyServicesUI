@@ -5,6 +5,7 @@ import { AppliancesCatComponent } from './appliances-cat/appliances-cat.componen
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {
+    
     path:"",
     component : AppliancesCatComponent,
     children:[
