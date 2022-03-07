@@ -13,21 +13,20 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                    <div class="text-center">
+                    <div class="text-center d-flex justify-content-center">
 
-                        <span class="d-none d-md-block">
-                            <mat-form-field appearance="outline" class="w-25">
-                                <mat-icon matPrefix class="add-top-space">location_on</mat-icon>
-                                <input matInput placeholder="Search by Location" appearance="outline">
-                            </mat-form-field>
-
+                        <span class="w-60">
+                            
+                                <app-geo-location-maps [searchType]="'input'"
+                                    [latitude]="latitudeUsedInEditModeOnly" [longitude]="longitudeUsedInEditModeOnly">
+                                </app-geo-location-maps>
+                            
                         </span>
-                        <span class="d-block d-md-none ms-2">
-                            <mat-form-field appearance="outline" class="w-100">
-                                <mat-icon matPrefix class="add-top-space">location_on</mat-icon>
-                                <input matInput placeholder="Search by Location" appearance="outline">
-                            </mat-form-field>
-                        </span>
+                        <!-- <span class="d-block d-md-none ms-2 w-100">
+                            <app-geo-location-maps [searchType]="'input'"
+                                    [latitude]="latitudeUsedInEditModeOnly" [longitude]="longitudeUsedInEditModeOnly">
+                                </app-geo-location-maps>
+                        </span> -->
 
                     </div>
 
@@ -45,8 +44,7 @@
 
                 <div class="row">
                     <span *ngFor="let btn of applianceServicesList" class="m-1 p-0 appliancesServicesButtons">
-                        <button type="button"
-                            class="btn btn-outline-secondary shadow">{{btn.ServiceName}}</button>
+                        <button type="button" class="btn btn-outline-secondary shadow">{{btn.ServiceName}}</button>
                     </span>
                 </div>
             </div>

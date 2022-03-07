@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppliancesCatComponent implements OnInit {
 
+  latitudeUsedInEditModeOnly: any;
+  longitudeUsedInEditModeOnly: any;
 
   applianceServicesList : any = [
     {
