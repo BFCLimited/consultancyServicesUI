@@ -1,0 +1,58 @@
+<div class="indexing position-absolute">
+    <span class="text-danger" mat-raised-button (click)="closeServiceProvides()">
+      <mat-icon>cancel</mat-icon>
+    </span>
+  </div>
+
+
+<div>
+    <div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1><b>Providers</b></h1>
+            </div>
+        </div>
+        <hr/>
+        <div>
+            <div class="row justify-content-center">
+                <mat-form-field class="example-form-field col-xl-4 col-lg-4 col-md-5 col-sm-8 col-xs-8 " appearance="outline">
+                    <input matInput type="text" placeholder="Seaarch by Name or Service"/>
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            
+                <mat-card class="example-card m-2" *ngFor="let Provider of Providers">
+                    <mat-card-header>
+                        <img class="shadow" src="{{Provider.image}}" mat-card-avatar />
+                        <mat-card-title>
+                            {{Provider.ProviderName}} 
+                        </mat-card-title>
+                        <span class="text-success" *ngIf="Provider.VerifiedProvider" matTooltip="Verified User"><mat-icon>verified_user</mat-icon></span>
+                        <mat-card-subtitle>
+                            {{Provider.ProviderDesg}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="mb-3">
+                            <span><b>Description :</b> &nbsp;</span>
+                            <span>{{Provider.Description}}</span>
+                        </div>
+                        <div class="d-flex">
+                        <span><b>Rating :</b>&nbsp;</span>
+                        <!-- <mat-icon>star</mat-icon> -->
+                            <span>&nbsp; {{Provider.Rating}} / 10</span>
+                        </div>
+                        <mat-divider inset></mat-divider>
+                        <mat-card-actions>
+                            
+                                <button mat-button class="m-1 ">Request Service</button>
+                                <button mat-button class="">Schedule Service</button>
+                            
+                        </mat-card-actions>
+                    </mat-card-content>
+                </mat-card>
+            
+        </div>
+    </div>
+</div>
