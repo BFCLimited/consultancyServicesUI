@@ -1,0 +1,65 @@
+<div class="container-fluid p-0" role="main">
+    <div class="row">
+      <!-- <div class="col-10">
+        <h3>Add Your Location</h3>
+      </div>
+      <div class="col-2 text-end">
+        <mat-icon matSuffix (click)="closeDialogref()">close</mat-icon>
+      </div> -->
+      <div class="col-12">
+        <ng-container
+          [ngTemplateOutlet]="searchType === 'map' ? mapT : input"
+        ></ng-container>
+  
+        <ng-template #input>
+          <!-- <mat-label for="txtSearchPlaces">Search here</mat-label> -->
+          <form class="form-horizontal p-0" #SearchPlacesForm="ngForm">
+            <mat-form-field appearance="outline" class="w-100 p-0 col-12">
+              <mat-icon matPrefix class="add-top-space">location_on</mat-icon>
+              <input
+                [(ngModel)]="shippingAddress"
+                type="text"
+                id="txtSearchPlaces"
+                name="txtSearchPlaces"
+                #txtSearchPlaces="ngModel"
+                matInput
+                placeholder="search here"
+              />
+              
+            </mat-form-field>
+          </form>
+          <div id="map"></div>
+        </ng-template>
+  
+        <ng-template #mapT>
+          <form class="form-horizontal p-0 pb-2" #SearchPlacesForm="ngForm">
+            <mat-form-field appearance="outline" class="w-100 p-0 col-12">
+              <input
+                [(ngModel)]="shippingAddress"
+                type="text"
+                id="txtSearchPlaces"
+                name="txtSearchPlaces"
+                #txtSearchPlaces="ngModel"
+                matInput
+                placeholder="search here"
+              />
+              <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+          </form>
+          <div style="height: 30vh;" id="map"></div>
+  
+          <!-- <input
+            id="pac-input"
+            type="text"
+            placeholder="Search Box"
+            class="font-sans"
+            matInput
+            [(ngModel)]="shippingAddress"
+          />
+  
+          <div id="map"></div> -->
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  

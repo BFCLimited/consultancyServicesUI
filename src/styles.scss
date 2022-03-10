@@ -1,0 +1,68 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ConsultancyServicesUI-primary: mat.define-palette(mat.$indigo-palette);
+$ConsultancyServicesUI-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ConsultancyServicesUI-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$ConsultancyServicesUI-theme: mat.define-light-theme((
+  color: (
+    primary: $ConsultancyServicesUI-primary,
+    accent: $ConsultancyServicesUI-accent,
+    warn: $ConsultancyServicesUI-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($ConsultancyServicesUI-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.full-screen-dialog {
+  min-width: 100vw;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow:scroll;
+  padding: 2px !important;
+}
+
+// Add full-screen-dialog as a panel class for dialog open config check vouchers-main.component.ts
+.short-screen-dialog {
+  // width: 500px;
+  min-width: 700px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.view-cart-screen-dialog {
+  max-height: 75vh;
+  max-width: 47vw;
+  height: 70vh;
+  width: 47vw;
+  padding-top: 9px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

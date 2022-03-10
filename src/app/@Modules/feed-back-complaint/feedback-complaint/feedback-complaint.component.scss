@@ -1,0 +1,18 @@
+.example-card {
+    max-height: 200px;
+    // margin: 10px;
+  }
+
+  .card-responsive{
+      max-width: 371px;
+      
+  }
+
+  .fit-image{
+    width: 100%;
+    object-fit: cover;
+    }
+
+    .floatcontent{
+        float: left;
+    }

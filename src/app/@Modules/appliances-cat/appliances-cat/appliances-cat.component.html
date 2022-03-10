@@ -1,0 +1,56 @@
+<div>
+    <div class="mt-2">
+
+        <!-- header content  -->
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+                <h1 class="m-0"><b>on Appliances...</b></h1>
+            </div>
+            <hr />
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    <div class="text-center d-flex justify-content-center">
+
+                        <span class="w-60">
+                            
+                                <app-geo-location-maps [searchType]="'input'"
+                                    [latitude]="latitudeUsedInEditModeOnly" [longitude]="longitudeUsedInEditModeOnly">
+                                </app-geo-location-maps>
+                            
+                        </span>
+                        <!-- <span class="d-block d-md-none ms-2 w-100">
+                            <app-geo-location-maps [searchType]="'input'"
+                                    [latitude]="latitudeUsedInEditModeOnly" [longitude]="longitudeUsedInEditModeOnly">
+                                </app-geo-location-maps>
+                        </span> -->
+
+                    </div>
+
+                    <!-- <div class="">
+                        <img class src="assets/images/view-all-services.jpg"/>
+                    </div> -->
+
+                    <!-- <div class="imgfit" [style.background-image]="'url(/assets/images/view-all-services.jpg)'"
+ 	                         [style.height.px]="150"></div> -->
+                </div>
+            </div>
+
+
+            <div class="container">
+
+                <div class="row">
+                    <span *ngFor="let btn of applianceServicesList" class="m-1 p-0 appliancesServicesButtons">
+                        <button type="button" class="btn btn-outline-secondary shadow">{{btn.ServiceName}}</button>
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

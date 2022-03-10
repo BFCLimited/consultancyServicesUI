@@ -1,0 +1,16 @@
+<div>
+  <app-header-nav [sidenav]="leftSidenav"></app-header-nav>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #leftSidenav [mode]="'over'" class="underneathHeader">
+      
+      <!-- follow header nav [sidenav]="leftSidenav" logic -->
+      <app-side-nav  [sidenav]="leftSidenav" ></app-side-nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="main_content underneathHeader">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
