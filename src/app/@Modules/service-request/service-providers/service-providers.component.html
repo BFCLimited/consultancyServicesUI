@@ -28,7 +28,7 @@
                         <mat-card-title>
                             {{Provider.ProviderName}} 
                         </mat-card-title>
-                        <span class="text-success" *ngIf="Provider.VerifiedProvider" matTooltip="Verified User"><mat-icon>verified_user</mat-icon></span>
+                        <span class="text-success" *ngIf="Provider.VerifiedProvider" ><mat-icon matTooltip="Verified Professional">verified_user</mat-icon></span>
                         <mat-card-subtitle>
                             {{Provider.ProviderDesg}}
                         </mat-card-subtitle>
@@ -46,7 +46,7 @@
                         <mat-divider inset></mat-divider>
                         <mat-card-actions>
                             
-                                <button mat-button class="m-1 ">Request Service</button>
+                                <button mat-button class="m-1" (click)="RequestServiceClick(Provider.ProviderId)">Request Service</button>
                                 <button mat-button class="">Schedule Service</button>
                             
                         </mat-card-actions>

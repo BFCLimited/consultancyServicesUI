@@ -1,0 +1,89 @@
+<div class="d-flex justify-content-end">
+<div class="indexing position-absolute">
+    <span class="text-danger" mat-raised-button (click)="closeConfirmationRequestDetails()">
+      <mat-icon>cancel</mat-icon>
+    </span>
+  </div>
+</div>
+
+<div>
+  <div>
+    <div class="text-center">
+      <h1><b>Confirm Request Details.</b></h1>
+    </div>
+    <hr/>
+
+    <div>
+      <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-10 col-xs-10">
+
+        
+        <h3><b>Use Recent Address.</b></h3>
+        <mat-selection-list [multiple]="false" >
+          <mat-list-option *ngFor="let address of RecentAddress" [value]="address" class="mb-2" (click)="onAddressClick(address)">
+            {{address.FullAddress}}
+          </mat-list-option>
+        </mat-selection-list>
+      </div>
+      </div>
+    </div>
+<hr/>
+    <div>
+      <div class="row justify-content-center">
+        <div class="text-center">
+          <h2><b>Service Request Details.</b></h2>
+          <h4>Selected Service was <b>Ac/Installation</b> with <b>Balu Machanic Works.</b></h4>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <mat-form-field appearance="outline" class="w-100">
+            <input matInput placeholder="Address" [(ngModel)]="Address" required>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Select State</mat-label>
+            <mat-select [(ngModel)]="State" required>
+              <mat-option *ngFor="let type of citys" [value]="type.Id">
+                {{type.Name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <mat-form-field appearance="outline" class="w-100">
+            <input matInput placeholder="City" [(ngModel)]="city" required>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <mat-form-field appearance="outline" class="w-100">
+            <input matInput placeholder="Ladmark" [(ngModel)]="LandMark" required>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <mat-form-field appearance="outline" class="w-100">
+            <input matInput placeholder="Mobile Number" [(ngModel)]="mobileNum" required>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <mat-form-field appearance="outline" class="w-100">
+            <input matInput placeholder="Pin Code" [(ngModel)]="pinCode" required>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="text-center">
+          <button mat-button class="bg-info">Submit</button>
+          <button mat-button class="text-warning" (click)="closeConfirmationRequestDetails()">Cancle</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
