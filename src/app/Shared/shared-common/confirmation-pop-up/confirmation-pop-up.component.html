@@ -1,0 +1,15 @@
+<div>
+    <div mat-dialog-title class="">
+        <h2>******  Confirm  *********</h2>
+    </div>
+    <div mat-dialog-content>
+        <p>
+            Thanks for Giving the Employment to our Professionals.
+            On <b>{{ServiceName}}</b> with <b>{{ProfessionalName}}</b>, we Reach you at <b>{{ClientMobile}}</b>
+        </p>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        <button mat-button [mat-dialog-close] cdkFocusInitial>Ok</button>
+      </div>
+</div>

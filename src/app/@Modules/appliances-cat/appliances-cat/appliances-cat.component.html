@@ -44,7 +44,7 @@
 
                 <div class="row">
                     <span *ngFor="let btn of applianceServicesList" class="m-1 p-0 appliancesServicesButtons">
-                        <button type="button" class="btn btn-outline-secondary shadow" (click)="ServiceClick(btn.ServiceID,btn.CategoryID)">{{btn.ServiceName}}</button>
+                        <button type="button" class="btn btn-outline-secondary shadow" (click)="ServiceClick(btn.ServiceID,btn.CategoryID,btn.ServiceName)">{{btn.ServiceName}}</button>
                     </span>
                 </div>
             </div>

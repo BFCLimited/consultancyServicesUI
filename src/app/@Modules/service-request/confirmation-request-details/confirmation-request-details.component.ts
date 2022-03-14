@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ConfirmationPopUpComponent } from 'src/app/Shared/shared-common/confirmation-pop-up/confirmation-pop-up.component';
 
 
 @Component({
@@ -47,15 +48,15 @@ citys : any = [
   },
   {
     Name: "Telangana",
-    Id:1
+    Id:2
   },
   {
     Name: "Tamil Nadu",
-    Id:1
+    Id:3
   },
   {
     Name: "Karnataka",
-    Id:1
+    Id:4
   },
 ];
 
@@ -66,11 +67,22 @@ LandMark = "";
 mobileNum = "";
 pinCode="";
 
+ServiceRequestData:any;
 
-
-  constructor(public _dialogCloseIconClicked: MatDialogRef<ConfirmationRequestDetailsComponent>) { }
+  constructor(public _dialogCloseIconClicked: MatDialogRef<ConfirmationRequestDetailsComponent>,
+    public _openDialog: MatDialog,
+    @Inject(MAT_DIALOG_DATA)
+    public data: {
+      ServiceId: number,
+      CategoryId: number,
+      ProviderId: number,
+      ServiceName:string,
+      ProviderName: string
+    }
+    ) { }
 
   ngOnInit(): void {
+    this.ServiceRequestData = JSON.parse(JSON.stringify(this.data));
   }
 
 
@@ -80,6 +92,26 @@ pinCode="";
     this.city = address.City;
     this.pinCode = address.Pin;
     this.LandMark = address.Street
+  }
+
+
+  RequestSubmit(){
+    const dialogRefConfirmationRequestdetailsPage = this._openDialog.open(
+      ConfirmationPopUpComponent,
+      {
+        width: '350px',
+        data : {
+          ServiceName : this.ServiceRequestData.ServiceName,
+          ProviderName : this.ServiceRequestData.ProviderName,
+        }
+      }
+    );
+    dialogRefConfirmationRequestdetailsPage
+      .beforeClosed()
+      .subscribe((data) => {
+        if (data) {
+        }
+      });
   }
 
 

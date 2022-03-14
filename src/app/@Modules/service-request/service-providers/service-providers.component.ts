@@ -119,7 +119,8 @@ export class ServiceProvidersComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA)
     public data: {
       ServiceID: number,
-      CategoryID: number
+      CategoryID: number,
+      ServiceName : string,
     }
     ) { }
 
@@ -135,7 +136,7 @@ export class ServiceProvidersComponent implements OnInit {
   }
 
 
-  RequestServiceClick(ProviderId : number){
+  RequestServiceClick(ProviderId : number, ProviderName: string){
     const dialogRefConfirmationRequestdetailsPage = this._openDialog.open(
       ConfirmationRequestDetailsComponent,
       {
@@ -143,6 +144,8 @@ export class ServiceProvidersComponent implements OnInit {
         data : {
           ServiceId : this.ServiceProviderData.ServiceID,
           CategoryId : this.ServiceProviderData.CategoryID,
+          ServiceName : this.ServiceProviderData.ServiceName,
+          ProviderName,
           ProviderId
         }
       }

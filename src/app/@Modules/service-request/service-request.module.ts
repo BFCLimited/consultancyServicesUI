@@ -7,6 +7,7 @@ import { ServiceProvidersComponent } from './service-providers/service-providers
 import { MaterialModule } from 'src/app/Shared/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationRequestDetailsComponent } from './confirmation-request-details/confirmation-request-details.component';
+import { SharedCommonModule } from 'src/app/Shared/shared-common/shared-common.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ConfirmationRequestDetailsComponent } from './confirmation-request-deta
     MaterialModule,
     ReactiveFormsModule,
     ServiceRequestRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedCommonModule
   ]
 })
 export class ServiceRequestModule { }

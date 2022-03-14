@@ -5,11 +5,13 @@ import { SharedCommonRoutingModule } from './shared-common-routing.module';
 import { GeoLocationMapsComponent } from './geo-location-maps/geo-location-maps.component';
 import { MaterialModule } from '../material.module';
 import { FormsModule } from '@angular/forms';
+import { ConfirmationPopUpComponent } from './confirmation-pop-up/confirmation-pop-up.component';
 
 
 @NgModule({
   declarations: [
-    GeoLocationMapsComponent
+    GeoLocationMapsComponent,
+    ConfirmationPopUpComponent
   ],
   imports: [
     CommonModule,

@@ -247,14 +247,15 @@ export class AppliancesCatComponent implements OnInit {
   }
 
 
-  ServiceClick(ServiceID : number, CategoryID : number){
+  ServiceClick(ServiceID : number, CategoryID : number,ServiceName : string){
     const dialogRefserviceProvidersPage = this._openDialog.open(
       ServiceProvidersComponent,
       {
         panelClass: "full-screen-dialog",
         data : {
           ServiceID,
-          CategoryID
+          CategoryID,
+          ServiceName
         }
       }
     );
