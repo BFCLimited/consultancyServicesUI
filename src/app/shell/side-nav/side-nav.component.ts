@@ -12,6 +12,16 @@ export class SideNavComponent implements OnInit {
 
   newSideNav = [
     {
+      id: 'Dashbord',
+      name: 'Dashboard',
+      display: true,
+      parentRouteName: 'home',
+      routeName: 'dashboard',
+      icon: 'dashboard',
+      iconColor: 'text-info',
+      child: [],
+    },
+    {
       id: 'Professional',
       name: 'Professional',
       display: true,

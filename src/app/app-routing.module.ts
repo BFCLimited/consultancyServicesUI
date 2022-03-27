@@ -3,12 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShellComponent } from './shell/shell.component';
 
 const routes: Routes = [
-  // {path: "", redirectTo:""},
+  { path: "", redirectTo: "home/dashboard", pathMatch: "full" },
 
   {
-    path: '',
+    path: 'home',
     component : ShellComponent,
     children :[
+      {
+        path: 'dashboard',
+        loadChildren: () =>
+          import('./@Modules/dashboard/dashboard.module').then(
+            (m) => m.DashboardModule
+          ),
+      },
       {
         path:'ProfessionalUse',
         loadChildren : () =>

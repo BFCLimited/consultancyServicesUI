@@ -12,13 +12,13 @@ import { RouterModule } from '@angular/router';
   declarations: [
     ShellComponent,
     SideNavComponent,
-    HeaderNavComponent
+    HeaderNavComponent,
   ],
   exports:[ShellComponent],
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
     
   ],
 })
