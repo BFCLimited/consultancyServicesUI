@@ -54,4 +54,8 @@ export class DashboardMainComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  SelectedCityClick(){
+    alert("Working on...");
+  }
+
 }

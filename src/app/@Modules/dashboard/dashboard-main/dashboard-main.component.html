@@ -26,7 +26,7 @@
             <h1><b>Services Available Places.</b></h1>
           </div>
             <div class="card-responsive mb-3 ms-2 float-left cursor-pointer" *ngFor="let city of citys">
-              <mat-card class="example-card rounded shadow overflow-hidden cursor-pointer">
+              <mat-card class="example-card rounded shadow overflow-hidden cursor-pointer" (click)="SelectedCityClick()">
                 <mat-card-content class="text-center align-items-center">
                   <p>
                     {{city.cityName}}
@@ -38,6 +38,43 @@
             </div>
           </div>
 
+
+
+
+          <div>
+            <div class="row text-center align-items-center bg-secondary p-5">
+              <div class="col-xl-4 col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                <h1 class="font-weight-bold safeTitle">
+                  Safe Service at home
+                </h1>
+                <h1 class="font-weight-bold">
+                  Safe With BFC Groups.
+                </h1>
+                <hr/>
+                <h3 class="font-weight-bold">
+                  COVID-19 Preventions.
+                </h3>
+            </div>
+
+            <div class="col-xl-8 col-lg-6 col-md-5 col-sm-12 col-xs-12 p-0">
+              <div class="">
+                <mat-card class="bg-transparent border-0 shadow-none">
+                  <mat-card-content>
+                    <img class="shadow rounded-circle m-2" src="assets/images/MaskMan.jpg" mat-card-lg-image />
+                    <img class="shadow rounded-circle m-2" src="assets/images/Clean.jpg" mat-card-lg-image />
+                    <img class="shadow rounded-circle m-2" src="assets/images/Rework.jpg" mat-card-lg-image />
+                    <img class="shadow rounded-circle m-2" src="assets/images/TimeWork.jpg" mat-card-lg-image />
+                    <img class="shadow rounded-circle m-2" src="assets/images/ProfessionalSupport.png" mat-card-lg-image />
+                    
+                    
+                  </mat-card-content>
+                </mat-card>
+              </div>
+            </div>
+
+
+            </div>
+          </div>
 
     </div>
 </div>
